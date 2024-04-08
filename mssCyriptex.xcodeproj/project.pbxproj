@@ -13,6 +13,12 @@
 		AF1A84D82BBD9DE100CC207A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1A84D62BBD9DE100CC207A /* Main.storyboard */; };
 		AF1A84DA2BBD9DE400CC207A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1A84D92BBD9DE400CC207A /* Assets.xcassets */; };
 		AF1A84DD2BBD9DE400CC207A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1A84DB2BBD9DE400CC207A /* LaunchScreen.storyboard */; };
+		AF1A84E82BBFE3DD00CC207A /* Cyripto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A84E72BBFE3DD00CC207A /* Cyripto.swift */; };
+		AF420F432BC0128D005C9331 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF420F422BC0128D005C9331 /* WebService.swift */; };
+		AF420F452BC040FF005C9331 /* CyriptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF420F442BC040FF005C9331 /* CyriptoViewModel.swift */; };
+		AF420F542BC045FD005C9331 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF420F532BC045FD005C9331 /* RxSwift */; };
+		AF420F602BC053DF005C9331 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AF420F5F2BC053DF005C9331 /* RxCocoa */; };
+		AF95B4F62BC1338600AA690B /* CyriptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95B4F52BC1338600AA690B /* CyriptoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		AF1A84D92BBD9DE400CC207A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF1A84DC2BBD9DE400CC207A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF1A84DE2BBD9DE400CC207A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1A84E72BBFE3DD00CC207A /* Cyripto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cyripto.swift; sourceTree = "<group>"; };
+		AF420F422BC0128D005C9331 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		AF420F442BC040FF005C9331 /* CyriptoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyriptoViewModel.swift; sourceTree = "<group>"; };
+		AF95B4F52BC1338600AA690B /* CyriptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyriptoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF420F602BC053DF005C9331 /* RxCocoa in Frameworks */,
+				AF420F542BC045FD005C9331 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,51 @@
 		AF1A84CF2BBD9DE100CC207A /* mssCyriptex */ = {
 			isa = PBXGroup;
 			children = (
-				AF1A84D02BBD9DE100CC207A /* AppDelegate.swift */,
-				AF1A84D22BBD9DE100CC207A /* SceneDelegate.swift */,
-				AF1A84D42BBD9DE100CC207A /* ViewController.swift */,
+				AF420F412BC0127D005C9331 /* Service */,
+				AF1A84E62BBEC53000CC207A /* Model */,
+				AF1A84E52BBEC52500CC207A /* ViewModel */,
+				AF1A84E42BBEC51F00CC207A /* View */,
 				AF1A84D62BBD9DE100CC207A /* Main.storyboard */,
 				AF1A84D92BBD9DE400CC207A /* Assets.xcassets */,
 				AF1A84DB2BBD9DE400CC207A /* LaunchScreen.storyboard */,
 				AF1A84DE2BBD9DE400CC207A /* Info.plist */,
 			);
 			path = mssCyriptex;
+			sourceTree = "<group>";
+		};
+		AF1A84E42BBEC51F00CC207A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF1A84D02BBD9DE100CC207A /* AppDelegate.swift */,
+				AF1A84D22BBD9DE100CC207A /* SceneDelegate.swift */,
+				AF1A84D42BBD9DE100CC207A /* ViewController.swift */,
+				AF95B4F52BC1338600AA690B /* CyriptoTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF1A84E52BBEC52500CC207A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF420F442BC040FF005C9331 /* CyriptoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF1A84E62BBEC53000CC207A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF1A84E72BBFE3DD00CC207A /* Cyripto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF420F412BC0127D005C9331 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AF420F422BC0128D005C9331 /* WebService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +131,10 @@
 			dependencies = (
 			);
 			name = mssCyriptex;
+			packageProductDependencies = (
+				AF420F532BC045FD005C9331 /* RxSwift */,
+				AF420F5F2BC053DF005C9331 /* RxCocoa */,
+			);
 			productName = mssCyriptex;
 			productReference = AF1A84CD2BBD9DE100CC207A /* mssCyriptex.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +163,9 @@
 				Base,
 			);
 			mainGroup = AF1A84C42BBD9DE100CC207A;
+			packageReferences = (
+				AF420F462BC045FD005C9331 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = AF1A84CE2BBD9DE100CC207A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF95B4F62BC1338600AA690B /* CyriptoTableViewCell.swift in Sources */,
 				AF1A84D52BBD9DE100CC207A /* ViewController.swift in Sources */,
+				AF420F452BC040FF005C9331 /* CyriptoViewModel.swift in Sources */,
 				AF1A84D12BBD9DE100CC207A /* AppDelegate.swift in Sources */,
+				AF1A84E82BBFE3DD00CC207A /* Cyripto.swift in Sources */,
+				AF420F432BC0128D005C9331 /* WebService.swift in Sources */,
 				AF1A84D32BBD9DE100CC207A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +422,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF420F462BC045FD005C9331 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF420F532BC045FD005C9331 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF420F462BC045FD005C9331 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		AF420F5F2BC053DF005C9331 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF420F462BC045FD005C9331 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF1A84C52BBD9DE100CC207A /* Project object */;
 }

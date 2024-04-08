@@ -9,6 +9,8 @@ import UIKit
 
 class CyriptoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lbprice: UILabel!
+    @IBOutlet weak var lbname: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +20,12 @@ class CyriptoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    public var item : Cyripto! {
+        didSet {
+            self.lbprice.text = item.price
+            self.lbname.text = item.currency
+        }
     }
 
 }

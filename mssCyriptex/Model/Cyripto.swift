@@ -6,3 +6,8 @@
 //
 
 import Foundation
+struct Cyripto : Decodable {
+    let currency : String
+    let price : String
+    
+}
